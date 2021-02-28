@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+*
+body{
+    background: #222;
+    color: #444;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+.navbar img{
+    width: 50px;
+    height: 30px;
+}
+
+.work{
+    margin-top: 70px;
+}
+/* <--header--> */
+#initial{
+    float: left;
+    margin-top: 8px;
+    margin-left: 15px;
+    width: 50px;
+    height: 30px;
+ }
+ 
+
+h1{
+    color: rgb(37,165,165);
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 50px;
+    padding:20px 0;
+    margin-left:15px;
+	margin-top: 250px;
+    letter-spacing: 5px;
+    margin-right: 20%;
+    display: block;
+    font-size: 38px;
+}
+p{
+    width: 50%;
+    text-align: left;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    position: relative;
+    margin-bottom: ;
+    left: 15%;
+    color: rgb(35,165,165);
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    align-items: center;
+}
+
+.drop-cap:first-letter {
+    float: left;
+    font-size: 4em;
+    line-height: 1;
+    margin: .125em .25em;
+    color: #fa7f72
+  }
+
+.single-item > span{
+    height: 32px;
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    width: 100%;
+    cursor: pointer;
+}
+.single-item > span:before{
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: #444;
+    margin: 0 auto 8px auto;
+    border-radius: 50%;
+}
+.img-area{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -50%;
+    width: 100%;
+}
+
+.img-area a img{
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    max-width: 100%;
+    border: 5px dotted #e1e1e1;
+}
+.img-area a span{
+    position: absolute;
+    width: 250%;
+    margin-left: -75%;
+    bottom: -40px;
+    left: 0;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+}
+
+.img-area a span:after{
+    margin-left: 5px;
+}
+.single-item.active{
+    width: 10%;
+}
+.single-item.active .img-area{
+    display: block;
+}
+
+/* <--3diconbox--> */
+.boxes{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-left: 70%;
+    margin-top: -30%;
+    display: inline-block
+}
+.box-area{
+   
+    animation: animate 5s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+}
+.box-area div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+}
+.box-area .box1{
+    background-image: url(css3.png);
+   
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: translateZ(100px);
+}
+.box-area .box2{
+    background-image: url(html5.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(90deg) translateZ(100px);
+}
+.box-area .box3{
+    background-image: url(javascript.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+}
+.box-area .box4{
+    background-image: url(bootstrap.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+}
+.box-area .box5{
+    background-image: url(mongodb.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+}
+.box-area .box6{
+    background-image: url(nodejs.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+@keyframes animate{
+    from, to{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16%{
+        transform: rotateY(-90deg);
+    }
+    33%{
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50%{
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66%{
+        transform: rotateY(-27deg) rotateX(90deg);
+    }
+    83%{
+        transform: rotateX(90deg);
+    }
+}
+@media screen and (max-width: 992px){
+    .box-area{
+        min-width: 400px;
+        display: none;
+    }
+    P{
+        color: gray;
+        text-align: center;
+        justify-content: center;
+    }
+    h1{
+        color: red;
+    }
+    .nav {
+       justify-content: center;
+      
+    }
+    
+}
